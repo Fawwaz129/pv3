@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/dist/output.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.38.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=DM+Mono:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=Lora:wght@700&family=Montserrat:wght@400;500;600;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@400;500;600;700&family=Varela+Round&display=swap"
+    rel="stylesheet">
+  <title>Fawwaz - Portfolio</title>
+</head>
+
+<body class="dark:bg-[#080455] bg-white">
+  <nav id="nav-dropdown"
+    class="bg-white  transition duration-300 ease-linear fixed w-full flex flex-wrap justify-between items-center shadow-md z-40 border-gray-200 py-2.5 dark:bg-[#080455]">
+    <div class="dropdown dropdown-right">
+      <label tabindex="0" class="btn btn-ghost btn-link">
+        <div class="flex  gap-5">
+          <a href="profile.html">
+            <img class="w-10 h-10" src="/src/img/propil.svg" alt="">
+          </a>
+        </div>
+      </label>
+    </div>
+
+    <button data-collapse-toggle="navbar-dropdown" type="button"
+      class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden  focus:outline-none  dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+      aria-controls="navbar-dropdown" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </button>
+    <div class="hidden justify-between p-3 items-center w-full md:flex md:w-auto md:order-1" id="navbar-dropdown">
+      <div class="relative mt-3 md:hidden">
+        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+          <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </div>
+        <input type="text" id="search-navbar" class="block p-2 pl-10 rounded-lg bg-gray-50 dark:bg-gray-700 w-full"
+          placeholder="Search...">
+
+      </div>
+
+      <ul class="flex flex-col  mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 ">
+        <li>
+          <a href="#home"
+            class="block font-Inter py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Beranda</a>
+        </li>
+        <li>
+          <a href="#certificate"
+            class="block font-Inter py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white   dark:hover:bg-gray-700 dark:hover:text-blue-700 md:dark:hover:bg-transparent dark:border-gray-700">Certificate</a>
+        </li>
+        <li>
+          <a href="#about"
+            class="block font-Inter py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white   dark:hover:bg-gray-700 dark:hover:text-blue-700 md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+        </li>
+
+        <li>
+          <a href="#project"
+            class="block font-Inter py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white   dark:hover:bg-gray-700 dark:hover:text-blue-700 md:dark:hover:bg-transparent dark:border-gray-700">Projects</a>
+        </li>
+
+        <li>
+          <a href="#contact"
+            class="block font-Inter py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-blue-700 md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+        </li>
+
+      </ul>
+
+
+
+    </div>
+
+
+    </div>
+  </nav>
+  <!-- Jumbo -->
+  <section id="home" class="gj do ir hj sp jr i pg">
+    <!-- Hero Images -->
+    <div class="container">
+      <div class="xc fn zd/2 2xl:ud-w-187.5 bd 2xl:ud-h-171.5 h q r">
+        <img src="/images/shape-01.svg" alt="shape" class="xc 2xl:ud-block h t -ud-left-[10%] ua" />
+        <img src="/images/shape-02.svg" alt="shape" class="xc 2xl:ud-block h u p va" />
+        <img src="/images/shape-03.svg" alt="shape" class="xc 2xl:ud-block h v w va" />
+        <img src="/images/shape-04.svg" alt="shape" class="h q r " />
+      </div>
+
+      <!-- Hero Content -->
+      <div class="bb ze ki xn 2xl:ud-px-0">
+        <div class="tc _o">
+          <div class="animate_left jn/2">
+            <h1 class="fk vj text-purple-900 dark:text-white zp or kk wm wb">Me specialize in Web Development</h1>
+            <p class="fq dark:text-white">
+              Let me introduce my self, My name is Maulana Nur Fawwaz I'm from central java more precise Purwokerto, and
+              now I'm in Senior High School majoring in Software Engineering.
+            </p>
+
+            <div class="tc tf yo zf mb">
+              <a href="#" class="ek jk lk gh gi hi rg ml il vc _d _l">Get Started Now</a>
+
+              <span class="tc sf">
+                <a href="https://api.whatsapp.com/send/?phone=6282223626952&text&type=phone_number&app_absent=0"
+                  class="inline-block dark:text-white ek xj kk wm"> Call me +62 8222 363 6952</a>
+                <span class="inline-block">For any question or concern</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-white dark:bg-[#080455] pb-40">
+    <div class="container">
+      <div class="flex flex-wrap">
+        <div class="w-full self-center px-4 lg:w-1/2">
+          <h1 data-aos="fade-up" class="uppercase font-semibold text-base text-purple-900 dark:text-white font-Outfit">
+            tentang saya</h1>
+          <h2 data-aos="fade-up"
+            class="text-purple-900 font-Outfit dark:text-white mt-1 mb-5 font-bold font-inter uppercase text-2xl lg:text-3xl">
+            Web developer !!</h2>
+          <p data-aos="fade-up" class="text-base font-Inter mb-10 text-gray-500 dark:text-white">Lorem, ipsum dolor sit
+            amet consectetur
+            adipisicing elit. Modi, maxime nihil! Exercitationem, odio? At magnam esse fugiat obcaecati,
+            saepe quibusdam?</p>
+        </div>
+        <div class="w-full self-center px-4 lg:w-1/2">
+          <h1 data-aos="fade-up"
+            class="uppercase text-2xl dark:text-white lg:text-4xl  mb-5 font-inter font-bold text-purple-900">mari
+            berteman !</h1>
+          <p data-aos="fade-up" class="font-inter text-base mb-5 dark:text-white text-gray-500">Lorem ipsum dolor sit
+            amet consectetur,
+            adipisicing elit. Quibusdam beatae numquam est eius ullam quisquam incidunt sit accusantium
+            labore error.</p>
+          <div class="flex gap-3 items-center">
+            <a data-aos="fade-up"
+              class="w-9 h-9 rounded-full hover:text-teal-300 flex justify-center item-center border hover:border-sky-500 hover:bg-purple-900 border-sky-300"
+              href="">
+              <svg class="fill-sky-400 dark:fill-sky-500" role="img" width="20" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <title>Instagram</title>
+                <path
+                  d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+              </svg>
+            </a>
+            <a data-aos="fade-up"
+              class="w-9 h-9 hover:text-teal-300  text-slate-300 rounded-full flex justify-center item-center border hover:border-sky-500 hover:bg-purple-900 border-sky-300"
+              href="">
+              <svg class="fill-sky-400 dark:fill-sky-500" role="img" width="20" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <title>Facebook</title>
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a data-aos="fade-up"
+              class="w-9 h-9 hover:text-teal-300  rounded-full flex justify-center item-center border hover:border-sky-500 hover:bg-purple-900 border-sky-300"
+              href="">
+              <svg class="fill-sky-400 dark:fill-sky-500" role="img" width="20" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <title>LinkedIn</title>
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a data-aos="fade-up"
+              class="w-9 h-9 hover:text-teal-300   rounded-full flex justify-center item-center border hover:border-sky-500 hover:bg-purple-900 border-sky-300"
+              href="">
+              <svg class="fill-sky-400 dark:fill-sky-500" role="img" width="20" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <title>TikTok</title>
+                <path
+                  d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section id="certificate" class="bg-white mb-20 py-24 dark:bg-[#080455] w-full">
+    <div data-aos="fade-up">
+      <p class=" uppercase text-purple-900 dark:text-white font-Inter text-center text-lg">certificate</p>
+    </div>
+    <div data-aos="fade-up">
+      <h1 id="Portfolio"
+        class="uppercase text-purple-900 z-10 text-center text-3xl font-bold md:text-5xl lg:mb-10  dark:text-white">
+        latest certificate</h1>
+    </div>
+    <div class="min-h-min flex container gap-3 justify-evenly items-center w-full prose flex-wrap">
+      <div data-aos="fade-up" class="mb-10 mt-14">
+        <a style="text-decoration: none;" href="#"
+          class="block rounded-lg p-4 w-[270px] md:w-[300px] hover:-translate-y-3 hover:bg-gray-800 text-gray-700 transition-[10s] group ease-in-out hover:dark:bg-[#0B0662] bg-gray-900 dark:bg-[#060341]  shadow-sm shadow-indigo-100">
+          <img alt="Home" src="/src/img/certificate/Screenshot 2022-11-23 at 10.45.41.png"
+            class="h-56 w-full group-hover:-translate-y-3 transition-[10s] rounded-md object-cover" />
+
+          <div class="mt-2 prose">
+            <div class="">
+              <dt class="sr-only">Certificate</dt>
+
+              <dd class="text-sm group-hover:-translate-y-3 transition-[10s] text-gray-500">Skilvul Certificate</dd>
+              <dd class="text-sm group-hover:-translate-y-3 transition-[10s] text-gray-500">C# Dasar</dd>
+            </div>
+
+            <div>
+              <dt class="sr-only">Address</dt>
+
+              <dd
+                class="text-sm mt-4 translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 w-[270px] text-white">
+                This is C# Dasar Skilvul Certificate.</dd>
+            </div>
+
+          </div>
+        </a>
+
+      </div>
+      <div data-aos="fade-up" class="mb-10 mt-14">
+        <a style="text-decoration: none;" href="#"
+          class="block rounded-lg w-[270px] md:w-[300px] p-4 bg-[#F8F9FF] hover:-translate-y-3 hover:bg-[#d5d6db]/40 text-gray-700  transition-[10s] group ease-in-out hover:dark:bg-slate-200 dark:bg-slate-300 shadow-sm shadow-indigo-100">
+          <img alt="Home" src="/src/img/certificate/Screenshot 2022-11-23 at 10.45.56.png"
+            class="h-56 w-full rounded-md group-hover:-translate-y-3 transition-[10s] object-cover" />
+
+          <div class="mt-2 prose">
+            <div class="">
+              <dt class="sr-only">Certificate</dt>
+
+              <dd class="text-sm group-hover:-translate-y-3 transition-[10s] text-gray-500">Skilvul Certificate</dd>
+              <dd class="text-sm group-hover:-translate-y-3 transition-[10s] text-gray-500">Python Dasar</dd>
+            </div>
+
+            <div>
+              <dt class="sr-only">Address</dt>
+
+              <dd
+                class="text-sm mt-4 translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 w-[270px] dark:text-gray-500">
+                This is Python Dasar Skilvul Certificate.</dd>
+
+            </div>
+
+          </div>
+        </a>
+
+      </div>
+      <div data-aos="fade-up" class="mb-10 mt-14">
+        <a style="text-decoration: none;" href="#"
+          class="block rounded-lg p-4 w-[270px] md:w-[300px] bg-gray-800 hover:-translate-y-3 hover:bg-gray-800 text-gray-700  transition-[10s] group ease-in-out hover:dark:bg-[#0B0662] dark:bg-[#060341] shadow-sm shadow-indigo-100">
+          <img alt="Home" src="/src/img/certificate/Screenshot 2022-11-23 at 10.46.10.png"
+            class="h-56 w-full group-hover:-translate-y-3 transition-[10s] rounded-md object-cover" />
+
+          <div class="mt-2 prose">
+            <div class="group-hover:-translate-y-3">
+              <dt class="sr-only">Certificate</dt>
+
+              <dd class="text-sm group-hover:-translate-y-3 transition-[10s] text-gray-500">Skilvul Certificate</dd>
+              <dd class="text-sm group-hover:-translate-y-3 transition-[10s] text-gray-500">Algorithm & Data
+                Structures
+              </dd>
+            </div>
+
+            <div>
+              <dt class="sr-only">Address</dt>
+
+              <dd
+                class="text-sm mt-4 translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 w-[270px] text-white">
+                This is Algorithm Pyhton Certificate.</dd>
+            </div>
+
+          </div>
+        </a>
+
+      </div>
+      <div data-aos="fade-up" class="mb-10 mt-14">
+        <a style="text-decoration: none;" href="#"
+          class="block rounded-lg p-4 w-[270px] md:w-[300px] bg-[#F8F9FF] hover:-translate-y-3 hover:bg-[#d5d6db]/40 text-gray-700 transition-[10s] group ease-in-out hover:dark:bg-slate-200 dark:bg-slate-300 shadow-sm shadow-indigo-100">
+          <img alt="Home" src="/src/img/certificate/Screenshot 2022-11-23 at 10.46.24.png"
+            class="h-56 w-full group-hover:-translate-y-3 transition-[10s] rounded-md object-cover" />
+
+          <div class="mt-2 prose">
+            <div class="group-hover:-translate-y-3">
+              <dt class="sr-only">Certificate</dt>
+
+              <dd class="text-sm group-hover:-translate-y-3 transition-[10s] text-gray-500">Skilvul Certificate</dd>
+              <dd class="text-sm group-hover:-translate-y-3 transition-[10s] text-gray-500">Git & Github</dd>
+            </div>
+
+            <div>
+              <dt class="sr-only">Address</dt>
+
+              <dd
+                class="text-sm mt-4 translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 w-[270px] text-gray-500">
+                This is Git & Github Skilvul Certificate.</dd>
+
+            </div>
+
+          </div>
+        </a>
+
+      </div>
+      <div data-aos="fade-up" class="mb-10 mt-14">
+        <div style="text-decoration: none;" href=""
+          class="block rounded-lg p-4 w-[270px] md:w-[300px] bg-[#F8F9FF] hover:-translate-y-3 hover:bg-[#d5d6db]/40 text-gray-700 transition-[10s] group ease-in-out hover:dark:bg-slate-200 dark:bg-slate-300 shadow-sm shadow-indigo-100">
+          <img alt="Home" src="/src/img/certificate/Screenshot 2022-11-23 at 10.46.38.png"
+            class="h-56 w-full group-hover:-translate-y-3 transition-[10s] rounded-md object-cover" />
+
+          <div class="mt-2 prose">
+            <div class="group-hover:-translate-y-3">
+              <dt class="sr-only">Certificate</dt>
+
+              <dd class="text-sm group-hover:-translate-y-3 transition-[10s] text-gray-500">Skilvul Certificate</dd>
+              <dd class="text-sm group-hover:-translate-y-3 transition-[10s] text-gray-500">HTML Dasar</dd>
+            </div>
+
+            <div>
+              <dt class="sr-only">Address</dt>
+
+              <dd
+                class="text-sm mt-4 translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 w-[270px] text-gray-500 ">
+                This is HTML Dasar Skilvul Certificate.</dd>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div data-aos="fade-up" class="mb-10 mt-14">
+        <a style="text-decoration: none;" href="#"
+          class="block rounded-lg p-4 w-[270px] md:w-[300px] bg-gray-900 hover:-translate-y-3 hover:bg-gray-800 text-gray-700  transition-[10s] group ease-in-out hover:dark:bg-[#0B0662] dark:bg-[#060341] shadow-sm shadow-indigo-100">
+          <img alt="Home" src="/src/img/certificate/Screenshot 2022-11-23 at 10.46.52.png"
+            class="h-56 w-full group-hover:-translate-y-3 transition-[10s] rounded-md object-cover" />
+
+          <div class="mt-2 prose">
+            <div class="group-hover:-translate-y-3">
+              <dt class="sr-only">Certificate</dt>
+
+              <dd class="text-sm group-hover:-translate-y-3 transition-[10s] text-gray-500">Skilvul Certificate</dd>
+              <dd class="text-sm group-hover:-translate-y-3 transition-[10s] text-gray-500">Boostrap 5</dd>
+            </div>
+
+            <div>
+              <dt class="sr-only">Address</dt>
+
+              <dd
+                class="text-sm mt-4 translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 w-[270px] text-white">
+                This is Boostrap 5 Skilvul Certificate.</dd>
+
+            </div>
+
+          </div>
+        </a>
+
+      </div>
+      <div data-aos="fade-up" class="mb-10 mt-14">
+        <a style="text-decoration: none;" href="#"
+          class="block rounded-lg p-4 w-[270px] md:w-[300px] bg-[#F8F9FF]  hover:-translate-y-3 hover:bg-[#d5d6db]/40 text-gray-700  transition-[10s] group ease-in-out hover:dark:bg-slate-200 shadow-sm dark:bg-slate-300 shadow-indigo-100">
+          <img alt="Home" src="/src/img/certificate/Screenshot 2022-11-23 at 10.47.04.png"
+            class="h-56 w-full group-hover:-translate-y-3 transition-[10s] rounded-md object-cover" />
+
+          <div class="mt-2 prose">
+            <div class="group-hover:-translate-y-3">
+              <dt class="sr-only">Certificate</dt>
+
+              <dd class="text-sm group-hover:-translate-y-3 transition-[10s] text-gray-500">Skilvul Certificate</dd>
+              <dd class="text-sm group-hover:-translate-y-3 transition-[10s] text-gray-500">CSS Dasar</dd>
+            </div>
+
+            <div>
+              <dt class="sr-only">Address</dt>
+
+              <dd
+                class="text-sm mt-4 translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 w-[270px] text-gray-500 ">
+                This is CSS Dasar Skilvul Certificate.</dd>
+
+            </div>
+
+          </div>
+        </a>
+
+      </div>
+      <div data-aos="fade-up" class="mb-10 mt-14">
+        <a style="text-decoration: none;" href="#"
+          class="block rounded-lg p-4 w-[270px] md:w-[300px] bg-gray-900 hover:-translate-y-3 hover:bg-gray text-gray-700 hover:bg-gray-800  transition-[10s] group ease-in-out hover:dark:bg-[#0B0662] shadow-sm dark:bg-[#060341] shadow-indigo-100">
+          <img alt="Home" src="/src/img/certificate/Screenshot 2022-11-23 at 10.47.24.png"
+            class="h-56 w-full group-hover:-translate-y-3 transition-[10s] rounded-md object-cover" />
+
+          <div class="mt-2 prose">
+            <div class="group-hover:-translate-y-3">
+              <dt class="sr-only">Certificate</dt>
+
+              <dd class="text-sm group-hover:-translate-y-3 transition-[10s] text-gray-500">Skilvul Certificate</dd>
+              <dd class="text-sm group-hover:-translate-y-3 transition-[10s] text-gray-500">Coding di Skilvul</dd>
+            </div>
+
+            <div>
+              <dt class="sr-only">Address</dt>
+
+              <dd
+                class="text-sm mt-4 translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 w-[270px] text-white">
+                This is Coding Di Skilvul Certificate.</dd>
+
+            </div>
+
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+  <section id="about" class="w-full bg-[#060341] min-h-min">
+    <div class="container prose py-14 pb-64 w-full">
+      <h1 class="text-center font-Inter text-3xl md:text-5xl mb-5 text-white">Built with Tailwindcss</h1>
+      <h3 class="text-center text-lg lg mt-0 mb-14 mx-auto text-gray-50/40 w-full lg:w-[37%]">There are several
+        components used by my website, one of the components is Tailwindcss.</h3>
+      <div class="flex w-full gap-3 justify-evenly items-center flex-wrap">
+        <img class="grayscale hover:grayscale-0 transition duration-500" src="/src/img/uideck.svg" alt="">
+        <img class="grayscale hover:grayscale-0 transition duration-500" src="/src/img/tailgrids.svg" alt="">
+        <img class="grayscale w-[350px] hover:grayscale-0 transition duration-500"
+          src="https://tailwindcss.com/_next/static/media/tailwindcss-logotype-white.e0b2bd6155fa0bed8e24ff6b28f4a911.svg"
+          alt="">
+        <img class="grayscale hover:grayscale-0 transition duration-500" src="/src/img/plainadmin.svg" alt="">
+      </div>
+    </div>
+  </section>
+  <section class="w-full relative flex justify-center items-center">
+    <div
+      class="container rounded-lg w-[300px]  justify-center items-center absolute -top-[160px] prose bg-[#4A6CF7] py-24 pb-24 sm:w-full">
+      <h1 class="lg:w-[55%] text-[1.5rem] md:text-5xl w-full text-white font-inter text-center mx-auto">You want to
+        send me message ?</h1>
+      <form method="dialog" action="#" class="mx-auto block text-center">
+        <input
+          class="px-5 rounded-full py-5 block text-center ring-transparent pl-10 pr-10 md:pl-48 md:pr-48 mx-auto focus:ring-0 text-white bg-white/20 placeholder:text-white/50 border border-white/20"
+          placeholder="Send me message" type="text">
+        <input value="Send message" data-modal-toggle="popup-modal" type="submit"
+          class="bg-white block mx-auto mt-3 px-5 py-3 top-[10px] rounded-full text-blue-700"></input>
+      </form>
+    </div>
+  </section>
+  <div id="popup-modal" tabindex="-1"
+    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 md:inset-0 h-modal md:h-full">
+    <div class="relative w-full max-w-md h-full md:h-auto">
+      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <button type="button"
+          class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+          data-modal-toggle="popup-modal">
+          <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+          <span class="sr-only">Close modal</span>
+        </button>
+        <div class="p-6 text-center">
+          <svg aria-hidden="true" class="mx-auto mb-4 w-14 h-14 text-gray-400 dark:text-gray-200"
+            xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m10.6 13.8l-2.175-2.175q-.275-.275-.675-.275t-.7.3q-.275.275-.275.7q0 .425.275.7L9.9 15.9q.275.275.7.275q.425 0 .7-.275l5.675-5.675q.275-.275.275-.675t-.3-.7q-.275-.275-.7-.275q-.425 0-.7.275ZM12 22q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Z" />
+            </svg>
+          <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure to send this message?</h3>
+          <button data-modal-toggle="popup-modal" type="button"
+            class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+            Yes, I'm sure
+          </button>
+          <button data-modal-toggle="popup-modal" type="button"
+            class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No,
+            cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="project" class="bg-[#F8F9FF]  py-24 pt-80 dark:bg-[#080455] w-full">
+    <p class="uppercase text-purple-900 dark:text-white font-Inter text-center text-lg">creative projects</p>
+    <h1
+      class="uppercase text-purple-900 z-10 text-center text-2xl font-bold md:text-5xl lg:mb-10 w-full dark:text-white">
+      latest projects</h1>
+    <div class="container prose min-h-min grid grid-cols-12 w-full">
+
+      <div class="row-start-2 z-10 col-start-1 col-span-12 md:col-start-1 md:row-start-2 md:col-span-5">
+        <img class="rounded-lg" src="/src/img/Screenshot 2022-11-18 at 09.02.21.png" alt="">
+      </div>
+      <div
+        class="col-start-1 z-10 row-start-3 col-span-12 min-h-min prose pt-5 p-0 md:p-5 md:pt-14 md:col-start-7 md:row-start-2 md:col-span-6">
+        <p
+          class="dark:bg-sky-800 text-white bg-purple-900 rounded-lg py-2 mt-0 dark:text-white font-Inter font-light text-center w-32">
+          WEB DESIGN</p>
+        <h4 class="dark:text-white mt-0 mb-4 font-[600]  text-[25px]">Website Design for Portfolio</h4>
+        <p class="dark:text-white">
+          This is my project when I made a portfolio website using tailwindcss and many more.
+        </p>
+        <a style="text-decoration: none;" href="#"
+          class="group mt-4  flex items-center gap-1 text-sm font-medium text-blue-600">
+          View Project
+
+          <span aria-hidden="true" class="block transition group-hover:translate-x-0.5">
+            &rarr;
+          </span>
+        </a>
+        <a style="text-decoration: none;"
+          class="group mt-7 relative inline-block text-sm font-medium text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
+          href="not found.html">
+          <span
+            class="absolute inset-0 translate-x-0.5 translate-y-0.5 bg-indigo-600 dark:bg-sky-500 transition-transform group-hover:translate-y-0 group-hover:translate-x-0"></span>
+
+          <span class="relative block border border-current bg-white px-8 py-3">
+            VIEW PROJECT
+          </span>
+        </a>
+      </div>
+      <div class="row-start-4 z-10 col-start-1 col-span-12 md:col-start-7 md:row-start-3 md:col-span-5">
+        <img class="rounded-lg" src="/src/img/16.png" alt="">
+      </div>
+      <div
+        class="col-start-1 z-10 row-start-5 col-span-12 min-h-min prose pt-5 p-0 md:p-5 md:pt-14 md:col-start-1 md:row-start-3  md:col-span-6">
+        <p
+          class="dark:bg-sky-800 text-white bg-purple-900 rounded-lg py-2 mt-0 dark:text-white font-Inter font-light text-center w-32">
+          WEB DESIGN</p>
+        <h4 class="dark:text-white mt-0 mb-4 font-[600]  text-[25px]">Website Design for Redesign</h4>
+        <p class="dark:text-white">
+          This is my project when I made a portfolio website using tailwindcss and many more.
+        </p>
+        <a style="text-decoration: none;" href="#"
+          class="group mt-4  flex items-center gap-1 text-sm font-medium text-blue-600">
+          View Project
+
+          <span aria-hidden="true" class="block transition group-hover:translate-x-0.5">
+            &rarr;
+          </span>
+        </a>
+        <a style="text-decoration: none;"
+          class="group mt-7 relative inline-block text-sm font-medium text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
+          href="not found.html">
+          <span
+            class="absolute inset-0 translate-x-0.5 translate-y-0.5 bg-indigo-600 dark:bg-sky-500 transition-transform group-hover:translate-y-0 group-hover:translate-x-0"></span>
+
+          <span class="relative block border border-current bg-white px-8 py-3">
+            VIEW PROJECT
+          </span>
+        </a>
+      </div>
+      <div class="row-start-6 z-10 col-start-1 col-span-12 md:col-start-1 md:row-start-4 md:col-span-5">
+        <img class="rounded-lg" src="/src/img/idnshop.png" alt="">
+      </div>
+      <div class="row-start-[8] z-10 col-start-1 col-span-12 md:col-start-1 md:row-start-4 md:col-span-5">
+        <img class="rounded-lg" src="/src/img/idnshop.png" alt="">
+      </div>
+      <div
+        class="col-start-1 z-10 row-start-[9] col-span-12 min-h-min prose pt-5 p-0 md:p-5 md:pt-14 md:col-start-7 md:row-start-4  md:col-span-6">
+        <p
+          class="dark:bg-sky-800 text-white bg-purple-900 rounded-lg py-2 mt-0 dark:text-white font-Inter font-light text-center w-32">
+          WEB DESIGN</p>
+        <h4 class="dark:text-white mt-0 mb-4 font-[600]  text-[25px]">Website Design for IDNSHOP</h4>
+        <p class="dark:text-white">
+          This is my project when I made a portfolio website using tailwindcss and many more.
+        </p>
+        <a style="text-decoration: none;" href="#"
+          class="group mt-4  flex items-center gap-1 text-sm font-medium text-blue-600">
+          View Project
+
+          <span aria-hidden="true" class="block transition group-hover:translate-x-0.5">
+            &rarr;
+          </span>
+        </a>
+        <a style="text-decoration: none;"
+          class="group mt-7 relative inline-block text-sm font-medium text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
+          href="not found.html">
+          <span
+            class="absolute inset-0 translate-x-0.5 translate-y-0.5 bg-indigo-600 dark:bg-sky-500 transition-transform group-hover:translate-y-0 group-hover:translate-x-0"></span>
+
+          <span class="relative block border border-current bg-white px-8 py-3">
+            VIEW PROJECT
+          </span>
+        </a>
+      </div>
+      <div class="row-start-[10] z-10 col-start-1 col-span-12 md:col-start-7 md:row-start-5 md:col-span-5">
+        <img class="rounded-lg" src="/src/img/login.png" alt="">
+      </div>
+      <div
+        class="col-start-1 z-10 row-start-[11] col-span-12 min-h-min prose pt-5 p-0 md:p-5 md:pt-14 md:col-start-1 md:row-start-5  md:col-span-6">
+        <p
+          class="dark:bg-sky-800 text-white bg-purple-900 rounded-lg py-2 mt-0 dark:text-white font-Inter font-light text-center w-32">
+          WEB DESIGN</p>
+        <h4 class="dark:text-white mt-0 mb-4 font-[600]  text-[25px]">Website Design for Form Login</h4>
+        <p class="dark:text-white">
+          This is my project when I made a portfolio website using tailwindcss and many more.
+        </p>
+        <a style="text-decoration: none;" href="#"
+          class="group mt-4  flex items-center gap-1 text-sm font-medium text-blue-600">
+          View Project
+
+          <span aria-hidden="true" class="block transition group-hover:translate-x-0.5">
+            &rarr;
+          </span>
+        </a>
+        <a style="text-decoration: none;"
+          class="group mt-7 relative inline-block text-sm font-medium text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
+          href="not found.html">
+          <span
+            class="absolute inset-0 translate-x-0.5 translate-y-0.5 bg-indigo-600 dark:bg-sky-500 transition-transform group-hover:translate-y-0 group-hover:translate-x-0"></span>
+
+          <span class="relative block border border-current bg-white px-8 py-3">
+            VIEW PROJECT
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" aria-label="Site Footer" class="bg-[#F8F9FF] dark:bg-[#080455]">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="flex justify-center text-teal-600">
+        <img class="w-[300px]" src="" alt="">
+      </div>
+      <nav aria-label="Footer Nav" class="mt-12">
+        <ul class="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
+          <li>
+            <a class="text-gray-700 font-inter font-semibold dark:text-white transition hover:text-gray-700/75"
+              href="/">
+              Beranda
+            </a>
+          </li>
+          <li>
+            <a class="text-gray-700 font-inter font-semibold dark:text-white transition hover:text-gray-700/75"
+              href="/">
+              Certificate
+            </a>
+          </li>
+
+          <li>
+            <a class="text-gray-700 font-inter  font-semibold dark:text-white  transition hover:text-gray-700/75"
+              href="/">
+              About
+            </a>
+          </li>
+
+          <li>
+            <a class="text-gray-700 font-inter font-semibold dark:text-white  transition hover:text-gray-700/75"
+              href="/">
+              Projects
+            </a>
+          </li>
+
+          <li>
+            <a class="text-gray-700 font-inter font-semibold dark:text-white  transition hover:text-gray-700/75"
+              href="/">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="mt-12 flex justify-center gap-6 md:gap-8">
+        <li>
+          <a href="/" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:text-gray-700/75">
+            <span class="sr-only">Facebook</span>
+            <svg class="h-6 fill-sky-500 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a href="/" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:text-gray-700/75">
+            <span class="sr-only">Instagram</span>
+            <svg class="h-6 fill-sky-500  w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a href="/" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:text-gray-700/75">
+            <span class="sr-only">Twitter</span>
+            <svg class="h-6 fill-sky-500  w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a href="/" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:text-gray-700/75">
+            <span class="sr-only">GitHub</span>
+            <svg class="h-6 fill-sky-500  w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a href="/" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:text-gray-700/75">
+            <span class="sr-only">Dribbble</span>
+            <svg class="h-6  fill-sky-500 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <hr class="mb-5 mt-10">
+      <div class="prose">
+        <h1 class="uppercase text-purple-900 dark:text-white mt-14 mb-0">portfolio wazwazz</h1>
+        <h2 class="uppercase text-purple-900 dark:text-white mt-0 font-DMmono">web developer</h2>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/src/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
